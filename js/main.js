@@ -20,18 +20,16 @@ function addInfo(name, lastName, age, address) {
     }
 };
 
-let sum = new addInfo('Jeff','Bezos' , 54, 'washington');
+let sum = new addInfo('Jeff', 'Bezos', 54, 'washington');
 
 
 document.getElementById("info").innerHTML = sum.info();
 
 // Use anynomus function
 
-const practiceWithFunction = function (x=1,y=3,a=2) {
-           const total =  x * y + a - (x * a);
-           return total;
+const practiceWithFunction = function (x = 1, y = 3, a = 2) {
+    const total = x * y + a - (x * a);
+    return total;
 }
 
- document.getElementById("practice").innerHTML = practiceWithFunction();
-
-
+document.getElementById("practice").innerHTML = practiceWithFunction();
