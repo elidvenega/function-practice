@@ -33,3 +33,17 @@ const practiceWithFunction = function (x = 1, y = 3, a = 2) {
 }
 
 document.getElementById("practice").innerHTML = practiceWithFunction();
+
+// Loops 
+
+// const numberList = [1,2,3,4,5,6,7];
+
+// for loop keeps running while condition is true
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`days without fast food ${rep}`);
+}
+
+// My own loop
+for (let a = 0; a <= 10; a++) {
+    console.log(a);
+}
