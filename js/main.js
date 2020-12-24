@@ -47,3 +47,12 @@ for (let rep = 1; rep <= 10; rep++) {
 for (let a = 0; a <= 10; a++) {
     console.log(a);
 }
+
+// closure a function that has access to an outside variable
+let number = 13;
+
+function numberAccess() {
+    return `You have to be at least ${number} to be allowed on this ride`;
+}
+
+document.getElementById('ride').innerHTML = numberAccess();
