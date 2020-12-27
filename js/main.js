@@ -58,56 +58,73 @@ function numberAccess() {
 document.getElementById('ride').innerHTML = numberAccess();
 
 // destructuring
-const alphabet = ['A','B','C','D','E','F'];
-const numbers = ['1','2','3','4','5','6','7'];
+const alphabet = ['A', 'B', 'C', 'D', 'E', 'F'];
+const numbers = ['1', '2', '3', '4', '5', '6', '7'];
 
 //const all = [alphabet,numbers];
-const [a,b,c,...rest] = alphabet;
+const [a, b, c, ...rest] = alphabet;
 
-console.log(a,b,c,...rest);
+console.log(a, b, c, ...rest);
 
-function sumAndMultiply(a,b) {
-    return[a+b, a*b]
+function sumAndMultiply(a, b) {
+    return [a + b, a * b]
 }
 
-const [x, multiply, division = "No division"] = sumAndMultiply(2,3);
+const [x, multiply, division = "No division"] = sumAndMultiply(2, 3);
 console.log(x);
 console.log(multiply);
 console.log(division);
 
 // destructuring object
+// const personOne = {
+//     name: "Kyle",
+//     age:24,
+//     address: {
+//         city: 'Somewhere',
+//         state: 'One of them'
+//     }
+// }
+
+// const personTwo = {
+//     name: 'Sally',
+//     age: 32,
+//     address: {
+//         city: "Somewhere else",
+//         state: "Another one of them"
+//     }
+// }
+
+// const {name: firstName ,age: birthday, favoriteFood = "Rice", address: {state}} = personTwo;
+// console.log(firstName,birthday,favoriteFood,state);
+
+
+// const personOne = {
+//     name: "Kyle",
+// }
+
+// const personTwo = {
+//     age: 32,
+//     address: {
+//         city: "Somewhere else",
+//         state: "Another one of them"
+//     }
+// }
+
+// const personThree = {...personOne ,...personTwo}
+// console.log(personThree);
+
 const personOne = {
     name: "Kyle",
-    age:24,
+    age: 24,
     address: {
         city: 'Somewhere',
         state: 'One of them'
     }
 }
 
-const personTwo = {
-    name: 'Sally',
-    age: 32,
-    address: {
-        city: "Somewhere else",
-        state: "Another one of them"
-    }
+
+function printUser({name,age, food="Mexican Food"}) {
+    console.log(`Name is ${name} and age is ${age} favorite ${food}`);
 }
 
-const 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+printUser(personOne)
