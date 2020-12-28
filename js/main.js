@@ -124,7 +124,27 @@ const personOne = {
 
 
 function printUser({name,age, food="Mexican Food"}) {
-    console.log(`Name is ${name} and age is ${age} favorite ${food}`);
+    return(`Name is ${name} and age is ${age} favorite ${food}`);
 }
 
 printUser(personOne)
+
+// need to figure this out
+const example = {
+    name: 'Eli',
+    hobby: 'guitar',
+    hobby2: 'dreaming',
+    us: {
+        city: 'vista',
+        heLivesIn: 'CA'
+    }
+}
+
+function animeUser(name,hobby) {
+    return (`His name is ${name} his hobby is ${hobby}`);
+}
+
+
+document.getElementById('name').innerHTML = printUser(personOne);
+//const {name,hobby,us: {city}} = example;
+//console.log(`His name is ${name} his hobby is ${hobby} and lives in ${city}`);
