@@ -127,24 +127,24 @@ function printUser({name,age, food="Mexican Food"}) {
     return(`Name is ${name} and age is ${age} favorite ${food}`);
 }
 
-printUser(personOne)
+//printUser(personOne)
 
 // need to figure this out
-const example = {
-    name: 'Eli',
+const elid = {
+    name: 'Elid',
     hobby: 'guitar',
     hobby2: 'dreaming',
     us: {
-        city: 'vista',
+        city: 'Vista',
         heLivesIn: 'CA'
     }
 }
 
-function animeUser(name,hobby) {
-    return (`His name is ${name} his hobby is ${hobby}`);
+function animeUser({name,hobby,hobby2, us: {city}}) {
+    return (`Hi my name is ${name} and my hobby is ${hobby} and I like ${hobby2} and from ${city}`);
 }
 
 
-document.getElementById('name').innerHTML = printUser(personOne);
+document.getElementById('name').innerHTML = animeUser(elid);
 //const {name,hobby,us: {city}} = example;
 //console.log(`His name is ${name} his hobby is ${hobby} and lives in ${city}`);
