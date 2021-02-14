@@ -132,8 +132,8 @@ function printUser({name,age, food="Mexican Food"}) {
 // need to figure this out
 const elid = {
     name: 'Elid',
-    hobby: 'guitar',
-    hobby2: 'dreaming',
+    hobby: 'Guitar',
+    hobby2: 'Dreaming',
     us: {
         city: 'Vista',
         heLivesIn: 'CA'
@@ -143,7 +143,6 @@ const elid = {
 function animeUser({name,hobby,hobby2, us: {city}}) {
     return (`Hi my name is ${name} and my hobby is ${hobby} and I like ${hobby2} and from ${city}`);
 }
-
 
 document.getElementById('name').innerHTML = animeUser(elid);
 //const {name,hobby,us: {city}} = example;
