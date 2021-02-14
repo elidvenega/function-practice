@@ -147,3 +147,6 @@ function animeUser({name,hobby,hobby2, us: {city}}) {
 document.getElementById('name').innerHTML = animeUser(elid);
 //const {name,hobby,us: {city}} = example;
 //console.log(`His name is ${name} his hobby is ${hobby} and lives in ${city}`);
+
+let hello = "hello";
+alert(hello);
