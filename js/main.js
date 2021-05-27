@@ -1,3 +1,5 @@
+'use strict';
+
 // I can only use function
 // purpose get better with functions
 function addText() {
@@ -7,8 +9,9 @@ function addText() {
 }
 
 document.getElementById("id").innerHTML = addText();
-document.getElementById("id").style.fontSize = '40px';
+document.getElementById("id").style.fontSize = '2rem';
 
+// constructor function
 // second function
 function addInfo(name, lastName, age, address) {
     this.name = name;
@@ -24,8 +27,9 @@ let sum = new addInfo('Jeff', 'Bezos', 54, 'washington');
 
 
 document.getElementById("info").innerHTML = sum.info();
+document.getElementById("info").style.fontSize = '2rem';
 
-// Use anynomus function
+// Use anonymous function
 
 const practiceWithFunction = function (x = 1, y = 3, a = 2) {
     const total = x * y + a - (x * a);
@@ -62,9 +66,9 @@ const alphabet = ['A', 'B', 'C', 'D', 'E', 'F'];
 const numbers = ['1', '2', '3', '4', '5', '6', '7'];
 
 //const all = [alphabet,numbers];
-const [a, b, c, ...rest] = alphabet;
+const [...rest] = alphabet;
 
-console.log(a, b, c, ...rest);
+console.log(...rest);
 
 function sumAndMultiply(a, b) {
     return [a + b, a * b]
@@ -123,8 +127,12 @@ const personOne = {
 }
 
 
-function printUser({name,age, food="Mexican Food"}) {
-    return(`Name is ${name} and age is ${age} favorite ${food}`);
+function printUser({
+    name,
+    age,
+    food = "Mexican Food"
+}) {
+    return (`Name is ${name} and age is ${age} favorite ${food}`);
 }
 
 //printUser(personOne)
@@ -134,13 +142,20 @@ const elid = {
     name: 'Elid',
     hobby: 'Guitar',
     hobby2: 'Dreaming',
-    us: {
+    country: {
         city: 'Vista',
         heLivesIn: 'CA'
     }
 }
 
-function animeUser({name,hobby,hobby2, us: {city}}) {
+function animeUser({
+    name,
+    hobby,
+    hobby2,
+    country: {
+        city
+    }
+}) {
     return (`Hi my name is ${name} and my hobby is ${hobby} and I like ${hobby2} and from ${city}`);
 }
 
@@ -148,5 +163,5 @@ document.getElementById('name').innerHTML = animeUser(elid);
 //const {name,hobby,us: {city}} = example;
 //console.log(`His name is ${name} his hobby is ${hobby} and lives in ${city}`);
 
-let hello = "hello";
-alert(hello);
+// let hello = "hello";
+// alert(hello);
